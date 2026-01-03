@@ -4750,7 +4750,9 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "🔍 *币种查询*\n\n"
                     f"```\n{coins_text}\n```\n"
                     f"📊 可查询币种 ({len(coins)} 个)\n"
-                    "💡 使用方法: 发送 `币种名!` 触发查询"
+                    "💡 使用方法:\n"
+                    "• `BTC!` - 交互式查询\n"
+                    "• `BTC!!` - 导出完整TXT文件"
                 )
                 keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🏠 返回主菜单", callback_data="main_menu")]])
                 await query.edit_message_text(text, reply_markup=keyboard, parse_mode='Markdown')
@@ -5111,11 +5113,11 @@ async def query_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         text = (
             "🔍 *币种查询*\n\n"
             f"```\n{coins_text}\n```\n"
-            "📊 可查询币种 ({} 个)\n"
+            f"📊 可查询币种 ({len(coins)} 个)\n"
             "💡 使用方法:\n"
-            "• `/query BTC` - 直接查询\n"
-            "• `BTC!` - 发送币种名+感叹号"
-        ).format(len(coins))
+            "• `BTC!` - 交互式查询\n"
+            "• `BTC!!` - 导出完整TXT文件"
+        )
         keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🏠 返回主菜单", callback_data="main_menu")]])
         await update.message.reply_text(text, reply_markup=keyboard, parse_mode='Markdown')
 
@@ -5525,8 +5527,9 @@ async def handle_keyboard_message(update: Update, context: ContextTypes.DEFAULT_
                     "🔍 *币种查询*\n\n"
                     f"```\n{coins_text}\n```\n"
                     f"📊 可查询币种 ({len(coins)} 个)\n"
-                    "💡 使用方法: 发送 `币种名!` 触发查询\n"
-                    "例如: `BTC!` 或 `ETH!`"
+                    "💡 使用方法:\n"
+                    "• `BTC!` - 交互式查询\n"
+                    "• `BTC!!` - 导出完整TXT文件"
                 )
                 keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🏠 返回主菜单", callback_data="main_menu")]])
                 await update.message.reply_text(text, reply_markup=keyboard, parse_mode='Markdown')
