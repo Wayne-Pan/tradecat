@@ -1041,9 +1041,9 @@ PGPASSWORD=postgres psql -h localhost -p 5433 -U postgres -c "\l"
 <details open>
 <summary><strong>点击展开👉 📞 联系方式</strong></summary>
 
-- **Telegram 频道**: [@tradecat_ai_channel](https://t.me/tradecat_ai_channel)
-- **Telegram 交流群**: [@glue_coding](https://t.me/glue_coding)
-- **Twitter/X**: [@123olp](https://x.com/123olp)
+- **Telegram 频道**: [tradecat_ai_channel](https://t.me/tradecat_ai_channel)
+- **Telegram 交流群**: [glue_coding](https://t.me/glue_coding)
+- **Twitter/X**: [123olp](https://x.com/123olp)
 
 </details>
 
